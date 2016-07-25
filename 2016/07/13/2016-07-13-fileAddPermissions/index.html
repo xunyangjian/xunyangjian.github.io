@@ -13,11 +13,11 @@
 
     <title>
         
-          xunyangjian的博客 | xunyangjian&#39;s Blog
+          Mac或Liux下.sh文件添加执行权限 - xunyangjian的博客 | xunyangjian&#39;s Blog
         
     </title>
 
-    <link rel="canonical" href="http://xunyangjian.github.io／/archives/2016/07/">
+    <link rel="canonical" href="http://xunyangjian.github.io／/2016/07/13/2016-07-13-fileAddPermissions/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -141,6 +141,169 @@
 
     <!-- Main Content -->
     
+<!-- Image to hack wechat -->
+<!-- <img src="http://xunyangjian.github.io／/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('linux_mac.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#Mac" title="Mac">Mac</a>
+                        
+                          <a class="tag" href="/tags/#Command" title="Command">Command</a>
+                        
+                    </div>
+                    <h1>Mac或Liux下.sh文件添加执行权限</h1>
+                    <h2 class="subheading">Error:command not found</h2>
+                    <span class="meta">
+                        作者： shijian.yang on
+                        2016-07-13
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><pre><code>1.touch hello.sh ##创建文件，mkdir：创建文件夹，内容：echo hello word
+2.sudo ./hello.sh 
+</code></pre><p>ERROR:<code>command not found</code>  </p>
+<h3 id="解决方法：添加权限"><a href="#解决方法：添加权限" class="headerlink" title="解决方法：添加权限"></a>解决方法：添加权限</h3><pre><code class="linux">chmod +x hello.sh
+</code></pre>
+<h4 id="追記："><a href="#追記：" class="headerlink" title="追記："></a>追記：</h4><pre><code>#修改文件名称
+ mv hello.sh changename.sh #同一个文件夹操作为改名，不同文件夹为剪切
+#删除文件
+rm changename.sh
+#拷贝文件
+cp hello.sh test/
+</code></pre>
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2016/07/25/herokuconfig/" data-toggle="tooltip" data-placement="top" title="Heroku">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2016/07/12/git_common_command/" data-toggle="tooltip" data-placement="top" title="Git常见问题及命令">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Mac" title="Mac">Mac</a>
+                        
+                          <a class="tag" href="/tags/#Command" title="Command">Command</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://www.rontech.co.jp/">株式会社ロンテック</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
     <!-- Footer -->
